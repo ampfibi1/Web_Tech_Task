@@ -1,0 +1,42 @@
+h1 {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+.regForm{
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    max-width: 300px; 
+    margin: 20px auto; 
+}
+.regForm h2 {
+    text-align: center;
+}
+.regForm input , .regForm select {
+    width: 100%;
+}
+.regForm button{
+    background-color: green; 
+    color: white; 
+    padding: 10px 20px; 
+    width: 100%;
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+h5{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+}
+footer{
+    position: fixed;  
+    width: 100%; 
+    background-color: blue; 
+    color: white; 
+    text-align: center; 
+    padding: 10px;
+}
