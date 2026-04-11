@@ -37,8 +37,7 @@
                     messageElement.textContent = `Total price: ${totalprice}TK`;
                 }
 
-                if(totalprice > 1000)   
-                 alert("You're eligible for gift coupon!");
+                if(totalprice > 1000) alert("You're eligible for gift coupon!");
             }
             quantityInput.addEventListener('input', updateTotalPrice);
             updateTotalPrice();

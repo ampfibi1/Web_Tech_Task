@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Information</title>
+    <style>
+        #userinfo{
+            margin:auto;
+            width: 50%;
+            text-align: center;
+        }
+        #dataTable{
+            margin:auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <fieldset id="userinfo">
+        <legend>User Information Form</legend>
+        <label>Name:</label>
+        <input type="text" id="name"> 
+        <br><br>
+        
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        
+        <br><br>
+        
+        <button id="btnsubmit">Submit</button>
+        
+        <br><br>
+        
+        <table border="1" id="dataTable">
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+            </tr>
+        </table>
+    </fieldset>
+ 
+    
+    
+    <script>
+        const submitButton = document.getElementById("btnsubmit");
+        submitButton.addEventListener("click", addData);
+        function addData()
+        {
+            const name = document.getElementById("name").value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const table = document.getElementById("dataTable");
+
+            const row = table.insertRow();
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+        
+            cell1.innerHTML = name;
+            cell2.innerHTML = gender;
+        }  
+    </script>
+</body>
+</html>
