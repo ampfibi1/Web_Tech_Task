@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Product Management Page</title>
+        <style>
+            #product {
+                border: 2px solid black;
+                padding: 20px;
+                width: 300px;
+                margin: 0 auto;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset id="product">
+            <legend>product management</legend>
+            <img src="/laptop.jpg" alt="laptop" width="200" height="200">
+            <h1>Hplaptop</h1>
+            <h3>price: 1000TK</h3>
+            <label for="quantity"><b>Quantity:</b></label>
+            <input type="number" id="quantity" name="quantity">
+
+            <p id="message"></p>
+
+        </fieldset>
+
+        <script>
+            const quantityInput = document.getElementById('quantity');
+            function updateTotalPrice() {
+                const quantity = parseInt(quantityInput.value);
+                let messageElement = document.getElementById('message');
+                let totalprice = quantity * 1000;
+                if (quantity < 0 || isNaN(quantity)) {
+                    quantityInput.value = '';
+                    messageElement.textContent = 'Quantity cannot be negative or non-numeric.';
+                } else {
+                    messageElement.textContent = `Total price: ${totalprice}TK`;
+                }
+
+                if(totalprice > 1000)   
+                 alert("You're eligible for gift coupon!");
+            }
+            quantityInput.addEventListener('input', updateTotalPrice);
+            updateTotalPrice();
+        </script>
+    </body>
+</html>
