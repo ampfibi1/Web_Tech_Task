@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management Page</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .container{
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+        input{
+            padding: 8px;
+            width: 120px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .price{
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Product Management</h2>
+        <p><b>Unit Price:</b> 1000</p>
+
+        <label>Quantity:</label><br>
+        <input type="number" id="quantity" value="0" min="0">
+        <br>
+
+        <label>Total Price:</label><br>
+        <input type="text" id="total" readonly value="0" class="price">
+    </div>
+    <script>
+    const unitPrice = 1000;
+    const quantityInput = document.getElementById("quantity");
+    const totalField = document.getElementById("total");
+    
+    quantityInput.addEventListener("input", function(){
+        let quantity = parseInt(quantityInput.value);
+
+        if(quantity < 0){
+            alert("Quantity cannot be negative!");
+            quantity = 0;
+            quantityInput.value = 0;
+        }
+        let total = unitPrice * quantity;
+        totalField.value = total;
+    
+        if(total > 1000)
+            alert("Congratulations! You are eligible for a Gift Coupon!");
+    });
+    </script>
+</body>
+</html>
