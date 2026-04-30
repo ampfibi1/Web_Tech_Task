@@ -1,0 +1,1 @@
+<?php echo "@Copyright 2024 Coffee Shop. All rights reserved."; ?>
