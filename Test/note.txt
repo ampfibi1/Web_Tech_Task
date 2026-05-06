@@ -1,0 +1,39 @@
+php ini 
+when user send a file , server process file 
+file initially on xaam as temporary file 
+single request 40MByte file send and at a request 20 files can be possible
+
+three condition for upload file
+>>is ini on 
+>>file upload using method = post ,
+>>encoding type = multipart/form-data
+
+what is multipart/form-data ? ?
+
+>>application/x-www-form-urlencoded Default-----------
+All characters are encoded before sent (spaces are converted to "+" symbols, and special characters are converted to ASCII HEX values)
+
+>>multipart/form-data ---------This value is necessary if the user will upload a file through the form
+
+>>text/plain ------- Sends data without any encoding at all. Not recommended
+
+file validation 
+
+final using cookie save as draft -- final exam 
+using mvc architecture file upload validation -- final exam 
+if($_FILES['profile_pic'])
+
+mcq 1marks 5*1
+
+
+db 
+mysqli -- only connect with mySql.
+pdo -- connect with any DB
+
+for each record fetch 
+mysqli_fetch_assoc()
+
+
+in MVC 
+model send data in controller though 
+controller send data in view using session 
