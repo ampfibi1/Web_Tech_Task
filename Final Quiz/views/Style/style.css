@@ -1,0 +1,10 @@
+*{
+	box-sizing: border-box;
+}
+form{
+	width: 60%;
+	margin: 0 auto;
+	align-content: center;
+	background-color: dodgerblue ;
+	padding: 20px;
+}

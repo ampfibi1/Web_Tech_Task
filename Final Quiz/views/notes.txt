@@ -1,0 +1,27 @@
+/*
+
+	//let f = true ; 
+
+	// // Source - https://stackoverflow.com/a/66453238
+	// // Posted by pubudu sachintha
+	// // Retrieved 2026-05-07, License - CC BY-SA 4.0
+	// let allowedExtension = ['image/jpeg', 'image/jpg', 'image/png','image/gif','image/bmp'];
+
+	// //----<input type="file" id='userimage' accept="image/*" name='userimage'>-----
+	// //---------<input type="file" id="imgUpload" name="imgUpload">
+
+	// let type = document.getElementById('imgUpload').files[0].type;
+
+
+	// if(allowedExtension.indexOf(type)>-1)
+	//  {
+	//     document.getElementById('errmsg').innerHTML = "Okay" ;
+	//     f = true ;  
+	//  }else{
+	//     alert('Not a image') ; 
+	//     document.getElementById('errmsg').innerHTML = "Not a image" ; 
+	//     f = false ; 
+	//  }
+
+	// return f ; 
+*/
