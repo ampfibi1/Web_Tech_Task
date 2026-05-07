@@ -1,5 +1,6 @@
 <?php
 	echo "Home Header<br><br>" ; 
+	session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,13 +15,12 @@
 		<br><br>
 
 		<span id="errmsg">
-
+			<?php echo isset($_SESSION["errmsg"])?$_SESSION["errmsg"]:""; ?>
 		</span>
-
 		
 		<input type="submit" id="submit" name="submit">
 	</form>
-	<script src="./Script/fileValidation.js"></script>
+	<!-- <script src="./Script/fileValidation.js"></script> -->
 </body>
 </html>
 
